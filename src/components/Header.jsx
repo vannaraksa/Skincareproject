@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { IoMdCart } from "react-icons/io";
+import { HiMenuAlt2 } from "react-icons/hi";
 function Header() {
   return (
     <>
@@ -13,8 +15,8 @@ function Header() {
               Krete
             </a>
           </div>
-          <div className="col-4">
-            <ul className="nav text-light fw-bold justify-content-center">
+          <div className="col-8 d-flex">
+            <ul className="nav text-light fw-bold d-none d-lg-flex">
               <li className="px-2 py-3">
                 <NavLink
                   to="/"
@@ -49,7 +51,16 @@ function Header() {
               </li>
             </ul>
           </div>
-          <div className="col-4"></div>
+          <div className="px-2 py-2 d-none d-lg-block">
+            <div className="d-flex justify-content-end">
+              <NavLink>
+                <IoMdCart className="fs-2 text-decoration-none text-light" />
+              </NavLink>
+              <NavLink>
+                <HiMenuAlt2 className="fs-2 text-decoration-none text-light" />
+              </NavLink>
+            </div>
+          </div>
         </div>
       </nav>
     </>
